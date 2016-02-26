@@ -1,7 +1,7 @@
 package org.apache.kylin.storage.hbase.ii.coprocessor.endpoint;
 
-import org.apache.kylin.common.util.Dictionary;
 import org.apache.kylin.dict.IDictionaryAware;
+import org.apache.kylin.dimension.Dictionary;
 import org.apache.kylin.invertedindex.index.TableRecordInfoDigest;
 import org.apache.kylin.metadata.model.TblColRef;
 import org.apache.kylin.storage.hbase.common.coprocessor.CoprocessorRowType;

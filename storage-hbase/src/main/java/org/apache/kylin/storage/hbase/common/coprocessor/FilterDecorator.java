@@ -4,11 +4,12 @@ import java.util.Collection;
 import java.util.Set;
 
 import org.apache.kylin.common.util.Bytes;
-import org.apache.kylin.common.util.Dictionary;
 import org.apache.kylin.cube.kv.RowKeyColumnIO;
 import org.apache.kylin.dict.DictCodeSystem;
 import org.apache.kylin.dict.IDictionaryAware;
 import org.apache.kylin.dict.TupleFilterDictionaryTranslater;
+import org.apache.kylin.dimension.Dictionary;
+import org.apache.kylin.dimension.DimensionEncoding;
 import org.apache.kylin.metadata.filter.ColumnTupleFilter;
 import org.apache.kylin.metadata.filter.CompareTupleFilter;
 import org.apache.kylin.metadata.filter.ConstantTupleFilter;
@@ -182,7 +183,7 @@ public class FilterDecorator implements TupleFilterSerializer.Decorator {
     private String translate(TblColRef column, String v, int roundingFlag) {
         byte[] value = Bytes.toBytes(v);
         byte[] id = new byte[columnIO.getColumnLength(column)];
-        columnIO.writeColumn(column, value, value.length, roundingFlag, Dictionary.NULL, id, 0);
+        columnIO.writeColumn(column, value, value.length, roundingFlag, DimensionEncoding.NULL, id, 0);
         return Dictionary.dictIdToString(id, 0, id.length);
     }
 }

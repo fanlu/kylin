@@ -22,8 +22,8 @@ import java.text.SimpleDateFormat;
 import java.util.List;
 import java.util.TimeZone;
 
-import org.apache.kylin.common.util.Dictionary;
 import org.apache.kylin.dict.IDictionaryAware;
+import org.apache.kylin.dimension.Dictionary;
 import org.apache.kylin.invertedindex.index.TableRecordInfo;
 import org.apache.kylin.invertedindex.model.IIDesc;
 import org.apache.kylin.invertedindex.model.IIJoinedFlatTableDesc;

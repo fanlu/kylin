@@ -1,7 +1,7 @@
 package org.apache.kylin.gridtable;
 
 import org.apache.kylin.common.util.ByteArray;
-import org.apache.kylin.common.util.Dictionary;
+import org.apache.kylin.dimension.Dictionary;
 
 public class DefaultGTComparator implements IGTComparator {
     @Override
